@@ -5,74 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Fayaz Khan</div>
+    <nav>
+      <h2 class="logo">Fayaz Khan</h2>
       <div class="right-nav">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Mohd Taufeeq Khan</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <main>
+      <section id="profile">
+        <div class="profile-pic-div"></div>
+        <div class="profile-info">
+          <p class="portfolio__para__p1">Hello, I'm</p>
+          <h1 class="title">Fayaz Khan</h1>
+          <p class="portfolio__para__p2">Data Analyst</p>
+          <div class="profile-btn">
+            <button
+              type="button"
+              onclick="window.open('./assets/Data Analyst Resume.pdf')"
+            >
+              Download CV
+            </button>
+            <button type="button" onclick="location.href = './#contact'">
+              Contact Info
+            </button>
+          </div>
+          <div class="profile-icons">
+            <img
+              src="./assets/img/linkedin.svg"
+              alt="linkedin"
+              class="icon"
+              onclick="window.open('https://www.linkedin.com/in/fayaz-khan-488051220/')"
+            />
+            <img
+              src="./assets/img/github.svg"
+              alt="github"
+              class="icon"
+              onclick="window.open('https://github.com/fayazanalytics')"
+            />
+          </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </section>
+      <section id="about">
+        <p class="portfolio__para__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="about-info">
+          <div class="about-pic-div"></div>
+          <div class="about-right-div">
+            <div class="about-right-top-div">
+              <div class="about-certificate-div"></div>
+              <div class="about-education-div"></div>
+            </div>
+            <div class="about-right-bottom-div">
+              <p class="portfolio__para__p1">
+                I am a certified data analyst with a solid foundation in Python,
+                SQL, Power BI, and spreadsheets, alongside hands-on experience
+                using powerful Python libraries such as pandas, numpy,
+                matplotlib, and seaborn for data manipulation and visualization.
+                I have also explored the exciting world of web scraping,
+                enabling me to gather data from various sources and transform it
+                into actionable insights. Though I am a fresher, my strong
+                analytical mindset, problem-solving skills, and passion for
+                extracting meaningful patterns from data make me eager to
+                contribute to impactful projects. I am excited to bring my
+                technical expertise, attention to detail, and enthusiasm to a
+                dynamic team where I can grow and make a real difference.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/img/pic1.jpg" alt="my-pic1" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Fayaz Khan</h1>
-        <p class="section__text__p2">Data Analyst</p>
-        <div class="btn-container">
-          <button
-            class="btn-color-2 btn"
-            onclick="window.open('assets/Data Analyst Resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button
-            class="btn-color-1 btn"
-            onclick="location.href = './#contact' "
-          >
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/img/linkedin.png"
-            alt="linkedin"
-            class="icon"
-            onclick="location.href = 'https://www.linkedin.com/in/fayaz-khan-488051220/'"
-          />
-          <img
-            src="./assets/img/github.png"
-            alt="github"
-            class="icon"
-            onclick="location.href = 'https://github.com/fayazanalytics'"
-          />
-        </div>
-      </div>
-    </section>
-    <script src="./script.js"></script>
+      </section>
+    </main>
   </body>
 </html>
