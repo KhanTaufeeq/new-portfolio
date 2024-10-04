@@ -4,13 +4,16 @@
     font-family: "Poppins", system-ui;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --primary-background-color: black;
     --primary-text-color: white;
     --primary-text-size: 2rem;
     --secondary-text-size: 1.5rem;
-    /* --secondary-background-color: black; */
-    --paragraph-color: rgb(85,85,85);
+    --paragraph-color: gray;
     --title-font-size : 3rem;
     --paragraph2-font-size : 1.75rem;
 }
@@ -34,19 +37,19 @@ nav .logo{
     font-weight: 400;
 }
 
-nav .right-nav {
+.right-nav {
     display: flex;
     justify-content: space-between;
     width: 30%;
 }
 
-nav .right-nav > a{
+.right-nav > a{
     color: var(--primary-text-color);
     font-size: var(--secondary-text-size);
     text-decoration: none;
 }
 
-nav .right-nav > a:hover {
+.right-nav > a:hover {
     text-decoration: underline;
     transition: all 400ms ease-in-out;
     color: gray;
@@ -56,10 +59,10 @@ nav .right-nav > a:hover {
 /* SECTION  */
 
 section {
-    margin: 4rem 8rem;
-    padding-top: 4vh;
+    margin: 0 8rem;
+    /* padding-top: 4vh; */
     border-radius: 2.5rem;
-    height: 80vh;
+    height: 90vh;
 }
 
 /* PROFILE  */
@@ -87,7 +90,7 @@ section {
     color: white;
 }
 .portfolio__para__p1 {
-    color: var(--paragraph-color);
+    color: var(--paragraph-color);;
 }
 .portfolio__para__p2{
     font-size: var(--paragraph2-font-size);
@@ -187,4 +190,154 @@ section {
 .arrow{
     position: absolute;
     right: 0;
+    bottom: 0;
+}
+
+/* SKILLS  */
+
+#skills{
+    position: relative;
+}
+
+#skills > p, h1 {
+    text-align: center;
+}
+.skills-div{
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 80%;
+    margin: 6rem auto 0rem auto;
+}
+.skills-div > p{
+    text-align: center;
+}
+.skills-info{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    place-items: left;
+    row-gap: 2rem;
+    column-gap: 8rem;
+    place-content: center;
+    margin: 3rem 0;
+}
+.skill-title > h3{
+    color: white;
+}
+.a__skill{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* PROJECTS  */
+#projects{
+    position: relative;
+}
+#projects > p{
+    text-align: center;
+}
+.projects-div{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 6rem;
+    place-items: center;
+}
+.a__project__div{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.project-img{
+    width: 22vw;
+    height: 24vw;
+    border-radius: 2rem;
+    background-position: center;
+    background-image: url('assets/img/amazon.jpg');
+    background-origin: content-box;
+    background-size: cover;
+    margin: 0 auto;
+}
+/* .project-img > img{
+    width: 100%;
+    border-radius: 2rem;
+} */
+.project-info > p{
+    margin: 1rem 0;
+    color: white;
+}
+.project-btn-div button {
+    width: 10rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+.project-btn-div button:hover{
+    background-color: white;
+    border: 2px solid black;
+    transition: all 400ms ease-in-out;
+    color: black;
+}
+
+/* CONTACT  */
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.upper-contact-div > p{
+    text-align: center;
+}
+.lower-contact-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 35%;
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+.contact-detail-div{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    margin:1rem;
+}
+.contact-para{
+    font-size: larger;
+}
+.contact-para > a{
+    color: white;
+    text-decoration: none;
+}
+.contact-para > a:hover{
+    text-decoration: underline;
+    transition: all 400ms ease-in-out;
+    color: gray;
+    text-underline-offset: 1rem;
+}
+.email-contact-div{
+    flex:0.6;
+}
+
+/* FOOTER  */
+
+footer{
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+footer > p{
+    color: white;
 }
