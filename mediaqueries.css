@@ -1,8 +1,66 @@
-@media screen and (max-width: 900px){
-    #desktop-nav{
+@media only screen and (max-width: 1200px){
+    .right-nav{
         display: none;
     }
-    #hamburger-nav{
-        display: flex;
+    .arrow{
+        display: none;
     }
+}
+
+@media only screen and (max-width: 650px) {
+    section {
+        height: fit-content;
+        padding-top: 4vh;
+        margin: 0 5%;
+    }
+    #profile{
+        display: block;
+        height: 83vh;
+        padding-top: 4vh;
+    }
+    .profile-pic-div{
+        margin: 0 auto 2rem auto;
+    }
+    .profile-btn{
+        margin-bottom: 2rem;
+        justify-content: space-around;
+    }
+    .about-pic-div{
+        margin: 0 auto 2rem auto;
+    }
+    .about-info{
+        display: block;
+        margin-top: 0rem;
+    }
+    .about-right-top-div{
+        flex-wrap: wrap;
+    }
+    .about-right-bottom-div > p{
+        text-align: justify;
+    }
+    #skills, #projects, #contact {
+        margin-top: 2rem;
+        position: static;
+    }
+    .skills-div{
+        margin-top: 2rem;
+    }
+    .skills-info{
+        grid-template-columns: repeat(1, auto);
+    }
+    .projects-div{
+        grid-template-columns: repeat(1, auto);
+    }
+    .lower-contact-div{
+        display: block;
+        width: 95%;
+    }
+    .projects-div {
+        margin-top: 2rem;
+        row-gap: 2rem;
+    }
+    .contact-para {
+        font-size: small;
+    }
+
 }

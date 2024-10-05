@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 :root{
@@ -60,10 +61,10 @@ nav .logo{
 
 section {
     margin: 0 8rem;
-    /* padding-top: 4vh; */
     border-radius: 2.5rem;
     height: 90vh;
 }
+
 
 /* PROFILE  */
 
@@ -74,8 +75,8 @@ section {
     gap: 8rem;
 }
 .profile-pic-div {
-    width: 450px;
-    height: 450px;
+    width: clamp(158px, 30vw, 40vw);
+    height: clamp(158px, 30vw, 40vw);
     border-radius: 50%;
     background-position: center;
     background-image: url('assets/img/pic1.jpg');
@@ -86,7 +87,7 @@ section {
     text-align: center;
 }
 .title {
-    font-size: var(--title-font-size);
+    font-size: clamp(42px, 3.3vw, 52px);
     color: white;
 }
 .portfolio__para__p1 {
@@ -134,6 +135,17 @@ section {
     transition: all 400ms ease-in-out;
 }
 
+/* @media only screen and (max-width: 650px){
+    #profile{
+        display: block;
+        height: 83vh;
+        padding-top: 4vh;
+    }
+    .profile-btn{
+        gap: 1rem;
+    }
+} */
+
 /* ABOUT  */
 
 #about{
@@ -153,8 +165,8 @@ section {
     margin-top: 6rem;
 }
 .about-info .about-pic-div{
-    width: 400px;
-    height: 400px;
+    width: clamp(158px, 30vw, 40vw);
+    height: clamp(158px, 30vw, 40vw);
     border-radius: 2.5rem;
     background-position: center;
     background-image: url('assets/img/pic3.jpg');
@@ -177,6 +189,11 @@ section {
     flex: 1;
     border-radius: 2rem;
     text-align: center;
+}
+.about-detail-div:hover{
+    background-color: rgb(85,85,85);
+    border-color: black;
+    transition: all 400ms ease-in-out;
 }
 .about-detail-div > h3{
     color: white;
@@ -209,6 +226,11 @@ section {
     width: 80%;
     margin: 6rem auto 0rem auto;
 }
+.skills-div:hover{
+    background-color: rgb(85,85,85);
+    border-color: black;
+    transition: all 400ms ease-in-out;
+}
 .skills-div > p{
     text-align: center;
 }
@@ -230,6 +252,14 @@ section {
     gap: 1rem;
 }
 
+/* media screen  */
+
+/* @media only screen and (max-width: 650px){
+    .skills-info{
+    grid-template-columns: repeat(1, auto);
+    }
+} */
+
 /* PROJECTS  */
 #projects{
     position: relative;
@@ -249,9 +279,14 @@ section {
     border-radius: 2rem;
     padding: 1rem;
 }
+.a__project__div:hover{
+    background-color: rgb(85,85,85);
+    border-color: black;
+    transition: all 400ms ease-in-out;
+}
 .project-img{
-    width: 22vw;
-    height: 24vw;
+    width: clamp(255px, 22vw, 24vw);
+    height: clamp(330px, 24vw, 26vw);
     border-radius: 2rem;
     background-position: center;
     background-image: url('assets/img/amazon.jpg');
@@ -279,10 +314,18 @@ section {
 }
 .project-btn-div button:hover{
     background-color: white;
-    border: 2px solid black;
+    border:none;
     transition: all 400ms ease-in-out;
     color: black;
 }
+
+/* media screen  */
+
+/* @media only screen and (max-width: 650px){
+    .projects-div{
+    grid-template-columns: repeat(1, auto);
+    }
+} */
 
 /* CONTACT  */
 
@@ -301,7 +344,7 @@ section {
     align-items: center;
     justify-content: space-around;
     gap: 2rem;
-    width: 35%;
+    width: 45%;
     border: 1px solid white;
     border-radius: 2rem;
     padding: 0.5rem;
