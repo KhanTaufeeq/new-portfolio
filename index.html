@@ -14,13 +14,29 @@
     />
   </head>
   <body>
-    <nav>
+    <nav id="desktop-nav">
       <h2 class="logo">Fayaz Khan</h2>
       <div class="right-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Fayaz Khan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
     </nav>
     <main>
@@ -230,7 +246,7 @@
         <p class="portfolio__para__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="projects-div">
-          <div class="a__project__div">
+          <div class="a__project__div" class="first-pro-div">
             <div class="project-img"></div>
             <div class="project-info">
               <p class="portfolio__para__p2">Amazon Sales Analysis</p>
@@ -241,7 +257,7 @@
               </div>
             </div>
           </div>
-          <div class="a__project__div">
+          <div class="a__project__div" class="second-pro-div">
             <div class="project-img"></div>
             <div class="project-info">
               <p class="portfolio__para__p2">Amazon Sales Analysis</p>
@@ -252,7 +268,7 @@
               </div>
             </div>
           </div>
-          <div class="a__project__div">
+          <div class="a__project__div" class="third-pro-div" >
             <div class="project-img"></div>
             <div class="project-info">
               <p class="portfolio__para__p2">Amazon Sales Analysis</p>
@@ -301,5 +317,6 @@
         <p>Copyright © 2024 Fayaz Khan. All Rights Reserved.</p>
       </footer>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

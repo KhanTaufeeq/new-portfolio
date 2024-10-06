@@ -57,6 +57,85 @@ nav .logo{
     text-underline-offset: 1rem;
 }
 
+/* hamburger  */
+
+#hamburger-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+  }
+  .menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links li {
+    list-style: none;
+  }
+  
+  .menu-links.open {
+    max-height: 300px;
+  }
+  
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+  
+  .hamburger-icon span:first-child {
+    opacity: 1;
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+
 /* SECTION  */
 
 section {
@@ -134,17 +213,6 @@ section {
     height: 3rem;
     transition: all 400ms ease-in-out;
 }
-
-/* @media only screen and (max-width: 650px){
-    #profile{
-        display: block;
-        height: 83vh;
-        padding-top: 4vh;
-    }
-    .profile-btn{
-        gap: 1rem;
-    }
-} */
 
 /* ABOUT  */
 
@@ -252,14 +320,6 @@ section {
     gap: 1rem;
 }
 
-/* media screen  */
-
-/* @media only screen and (max-width: 650px){
-    .skills-info{
-    grid-template-columns: repeat(1, auto);
-    }
-} */
-
 /* PROJECTS  */
 #projects{
     position: relative;
@@ -294,10 +354,6 @@ section {
     background-size: cover;
     margin: 0 auto;
 }
-/* .project-img > img{
-    width: 100%;
-    border-radius: 2rem;
-} */
 .project-info > p{
     margin: 1rem 0;
     color: white;
@@ -318,14 +374,6 @@ section {
     transition: all 400ms ease-in-out;
     color: black;
 }
-
-/* media screen  */
-
-/* @media only screen and (max-width: 650px){
-    .projects-div{
-    grid-template-columns: repeat(1, auto);
-    }
-} */
 
 /* CONTACT  */
 
